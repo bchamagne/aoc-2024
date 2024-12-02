@@ -8,7 +8,7 @@ defmodule Day1 do
 
     [Enum.sort(lefts), Enum.sort(rights)]
     |> Enum.zip()
-    |> Enum.map(fn {l, r} -> abs(l - r) end)
+    |> Enum.map(&Utils.distance/1)
     |> Enum.sum()
     |> IO.puts()
   end
